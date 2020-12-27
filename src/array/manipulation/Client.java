@@ -18,12 +18,10 @@ public class Client {
     }
 
     public static void main(String[] args) {
-
         final int numberOfClients = 2;
         Client[] clients = new Client[numberOfClients];
 
         for (int i = 0; i < numberOfClients; i++) {
-
             clients[i] = new Client();
             System.out.println("Enter information for Client " + (i + 1));
             clients[i].keyboardClientInfo();
@@ -31,8 +29,6 @@ public class Client {
 
         System.out.println("List of Client \n ");
         for (int i = 0; i < numberOfClients; i++) {
-
-//            clients[i] = new Client();
             clients[i].displayClientInfo();
         }
 
@@ -40,15 +36,15 @@ public class Client {
 
     public void keyboardClientInfo() {
         Scanner input = new Scanner(System.in);
-        System.out.println("Client name: ");
+        System.out.print("Client name: ");
         name = input.nextLine();
-        System.out.println("Client number: ");
+        System.out.print("Client number: ");
         clientNumber = input.nextInt();
 
     }
 
     public void displayClientInfo() {
-        System.out.println("Client Name: " + name + " Client Number" + clientNumber);
+        System.out.println("Client Name: " + name + " Client Number: " + clientNumber);
     }
 }
 
